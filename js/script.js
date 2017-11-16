@@ -1,5 +1,5 @@
 function calculate() {
-	var text = document.getElementById('all-text').value;
+	var text = document.getElementById('all-text').value.trim();
 	var totalWords = 0;
 	var totalSpaces = 0;
 	var totalSentences = 0;
@@ -15,8 +15,8 @@ function calculate() {
 	}
 	totalWords++;
 
-	document.getElementById('avg-words').innerHTML = "Average words per sentence: " + totalWords / totalSentences;
-	document.getElementById('total-spaces').innerHTML = "Total spaces: " + totalSpaces;
-	document.getElementById('total-words').innerHTML = "Total words: " + totalWords;
-	document.getElementById('total-sentences').innerHTML = "Total sentences: " + totalSentences;
+	document.getElementById('avg-words').innerHTML = "There are an average of " + totalWords / totalSentences + " words per sentence.";
+	document.getElementById('total-spaces').innerHTML = "There are " + totalSpaces + " spaces in this text.";
+	document.getElementById('total-words').innerHTML = "There are " + totalWords + " words in this text.";
+	document.getElementById('total-sentences').innerHTML = "There are " + totalSentences + " sentences in this text.";
 }
